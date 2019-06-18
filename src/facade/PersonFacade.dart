@@ -1,12 +1,23 @@
+import '../mapper/DogMapper.dart';
 import '../model/Person.dart';
+import '../service/PersonService.dart';
 
 class PersonFacade{
+
+  PersonService _service;
+
+
+  PersonService get service => _service;
+
+  set service(PersonService value) {
+    _service = value;
+  }
 
   void getDog(){
 
   }
   void starApp(){
-
+    service.save(_getPersons(), List.of([DogMapper.mapToDog(_getPerson())]));
   }
 
   List<Person> _getPersons(){
@@ -35,5 +46,8 @@ class PersonFacade{
     uniquePerson.ate();
     uniquePerson.mustTalk();
     uniquePerson.dnaCode = "AHGS5547DS687276";
+    return uniquePerson;
   }
+
+
 }
