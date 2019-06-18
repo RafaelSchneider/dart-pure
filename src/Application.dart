@@ -1,3 +1,4 @@
+import 'facade/PersonFacade.dart';
 import 'mapper/DogMapper.dart';
 import 'model/Dog.dart';
 import 'model/Person.dart';
@@ -29,6 +30,8 @@ void main(){
   Dog dog = DogMapper.mapToDog(person);
   String dogName = dog.name;
   print("Dog's name is $dogName, using mapper with static method. ");
+  PersonFacade personFacade = PersonFacade();
+
 
 }
 
