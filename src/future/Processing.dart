@@ -3,8 +3,10 @@ import 'dart:math';
 class Processing{
 
   Future<void> generateSumAndOrderMillion() async {
+
     List<int> ints = new List<int>();
     Random rand = new Random();
+    print('Processing 1000000000 numbers and ordering...');
     String text = await test(ints, rand);
 
     Future.delayed(Duration(seconds: 2));
