@@ -1,4 +1,5 @@
 import '../mapper/DogMapper.dart';
+import '../model/Dog.dart';
 import '../model/Person.dart';
 import '../service/PersonService.dart';
 
@@ -13,9 +14,11 @@ class PersonFacade{
     _service = value;
   }
 
-  void getDog(){
 
+  PersonFacade(){
+    this.service = new PersonService();
   }
+
   void starApp(){
     service.save(_getPersons(), List.of([DogMapper.mapToDog(_getPerson())]));
   }

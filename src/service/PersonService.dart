@@ -13,13 +13,15 @@ class PersonService{
   }
 
   void savePerson(Person person){
-    print('Will save archive of Person');
+    String name = person.name;
+    print('Will save archive of Person called: $name');
     //var file = new File("teste.txt").create();
 
   }
 
   void saveDog(Dog dog){
-    print('Will save archive of Dogs');
+    String name = dog.name;
+    print('Will save archive of Dogs called: $name');
     //var file = new File("teste.txt").create();
   }
 
