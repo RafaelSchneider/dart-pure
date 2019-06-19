@@ -21,5 +21,4 @@ class Processing{
     return ints.last.toString();
   }
 
-
 }

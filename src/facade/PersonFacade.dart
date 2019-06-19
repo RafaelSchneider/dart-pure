@@ -1,6 +1,5 @@
 import '../future/Processing.dart';
 import '../mapper/DogMapper.dart';
-import '../model/Dog.dart';
 import '../model/Person.dart';
 import '../service/PersonService.dart';
 
@@ -9,13 +8,11 @@ class PersonFacade{
   PersonService _service;
   Processing _processing;
 
-
   PersonService get service => _service;
 
   set service(PersonService value) {
     _service = value;
   }
-
 
   PersonFacade(){
     this.service = new PersonService();
@@ -55,6 +52,5 @@ class PersonFacade{
     uniquePerson.dnaCode = "AHGS5547DS687276";
     return uniquePerson;
   }
-
 
 }

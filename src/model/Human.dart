@@ -1,7 +1,6 @@
 class Human{
   String _dnaCode;
 
-
   String get dnaCode => _dnaCode;
 
   set dnaCode(String value) {
