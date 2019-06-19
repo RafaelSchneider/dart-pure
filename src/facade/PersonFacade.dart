@@ -1,3 +1,4 @@
+import '../future/Processing.dart';
 import '../mapper/DogMapper.dart';
 import '../model/Dog.dart';
 import '../model/Person.dart';
@@ -6,6 +7,7 @@ import '../service/PersonService.dart';
 class PersonFacade{
 
   PersonService _service;
+  Processing _processing;
 
 
   PersonService get service => _service;
@@ -17,9 +19,11 @@ class PersonFacade{
 
   PersonFacade(){
     this.service = new PersonService();
+    this._processing = new Processing();
   }
 
   void starApp(){
+    _processing.generateSumAndOrderMillion();
     service.save(_getPersons(), List.of([DogMapper.mapToDog(_getPerson())]));
   }
 
